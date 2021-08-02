@@ -1,6 +1,7 @@
 import Sequelize from 'sequelize';
+import { connection } from '../config/config.js'; 
 
-export const sequelize = new Sequelize('postgres://viktor:viktor123@localhost:5432/onlinestore');
+export const sequelize = new Sequelize(connection);
 
 export const User = sequelize.define('user', {
   id: {
